@@ -1,4 +1,4 @@
-// accessing 
+// accessing html elements
 const selects = document.querySelectorAll("select");
 const btn = document.querySelector("button");
 const fromCurr = document.querySelector("#fromSelect");
@@ -6,7 +6,6 @@ const toCurr = document.querySelector("#toSelect");
 const msg = document.querySelector(".rate");
 const last_updated = document.querySelector(".last_updated")
 const icon = document.querySelector(".icon");
-
 
 // flag updating function
 
@@ -39,7 +38,6 @@ for(let select of selects){
         updateFlag(e.target);
     });
 }
-
 
 // fetching exchange rate function
 
@@ -79,17 +77,13 @@ const exchangeRate = async () => {
     }  
 };
 
-
-
-
 // handling click on button
 
 btn.addEventListener("click", (e) => {
     e.preventDefault();
     updateFlag(fromCurr);
     updateFlag(toCurr);
-    exchangeRate();
-    
+    exchangeRate();    
 });
 
 // handling click on icon
